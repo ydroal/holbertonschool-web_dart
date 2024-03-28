@@ -18,7 +18,7 @@ Future<double> calculateTotal() async {
       var priceData = json.decode(priceJson);
       double? price = priceData != null ? double.tryParse(priceData.toString()) : null;
       if (price != null) {
-        total += price as double;
+        total += price;
       } else {
         throw Exception('No price list'); 
       }
